@@ -39,7 +39,7 @@ def new_post():
     db.session.commit()
 
     return render_template('base.html', title="Build a Blog")
-app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RU'
+app.secret_key = 'Thiswillbeagreatjourney2win'
 
 if __name__ == '__main__':
     app.run()
