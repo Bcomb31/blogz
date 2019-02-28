@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+   
+<h1 style="text-align:center;">Blogs Post</h1>
+    {% if blogs|length == 0%}
+        <p> No blogs yet! </p>
+    {%else%}
+        {% for blog in blogs %}
+        <h2 style="text-decoration:underline;"> <a href="./blog?id={{blog.id}}" style="color:rgb(100, 137, 100);">{{blog.name}}</a> </h2>
+        <p>{{blog.entry}} </p>
+        <p style="font-size:10pt;">Written by: <a href="./blog?user={{blog.owner.username}}">{{blog.owner.username}}</a> </p>
+        {%endfor%}
+    {%endif%}
+
+{%endblock%}
